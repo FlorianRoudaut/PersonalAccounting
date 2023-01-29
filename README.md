@@ -1,1 +1,3 @@
-# PersonalAccounting
+# PersonnalAccounting
+
+Tool to manage personnal finances
