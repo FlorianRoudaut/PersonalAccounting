@@ -1,0 +1,22 @@
+@page "/insert"
+
+<PageTitle>Insert Flow</PageTitle>
+
+<h1>Insert Flow</h1>
+
+<EditForm Model="@flow" OnSubmit="@HandleSubmit">
+    <InputText id="name" @bind-Value="flow.Name" />
+    <InputDate id="date"  @bind-Value="flow.Date" />
+    <InputNumber id="amount" @bind-Value="flow.Amount" />
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code {
+    private Flow flow = new();
+
+    private void HandleSubmit()
+    {
+        DataStore.Flows.Add(flow);
+        // Process the form
+    }
+}
